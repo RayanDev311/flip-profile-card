@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(206, 239, 241);
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    perspective: 1000px;
+}
+.card {
+    position: relative;
+    width: 350px;
+    height: 175px;
+    transition: all 8s linear;
+    transform-style: preserve-3d;
+}
+.front, .back {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+}
+.front {
+    color: black;
+    background-color: #fff;
+    z-index: 2;
+    font-size: 20px;
+    backface-visibility: hidden;
+}
+.back {
+    background-color: black;
+    color: #fff;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.card:hover {
+    transform: rotateY(1440deg);
+}
+button {
+    background-color: black;
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    outline: none;
+    font-size: 25px;
+    font-family: cursive;
+}
+.front button {
+    background-color: black;
+    color: #fff;
+}
+.back button {
+    color: black;
+    background-color: #fff;
+}
